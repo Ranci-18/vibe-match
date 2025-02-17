@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 // const express = require('express');
 import express from 'express';
 // const bodyParser = require('body-parser');
@@ -32,6 +34,6 @@ app.post('/api/get-similar-vibes', async (req, res) => {
     }
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, '127.0.0.1', () => {
     console.log(`Server listening on port ${PORT}`);
 })
