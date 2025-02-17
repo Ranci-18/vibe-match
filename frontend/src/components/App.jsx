@@ -15,7 +15,7 @@ const App = () => {
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
         try {
-            const response = await fetch("http://vm-ip:5000/api/get-similar-vibes", {
+            const response = await fetch(process.env.API_ENDPOINT, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -30,7 +30,8 @@ const App = () => {
                 throw new Error("Network response was not ok");
             }
 
-            const moviesArray = await response.json();
+            const data = await response.json();
+            const moviesArray = data.data;
             setFinResults(moviesArray);
         } catch (err) {
             console.error("Error:", err);
