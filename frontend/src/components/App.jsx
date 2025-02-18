@@ -26,6 +26,7 @@ const App = () => {
                 }),
             });
 
+            console.log(process.env.API_ENDPOINT);
             if (!response.ok) {
                 throw new Error("Network response was not ok");
             }
