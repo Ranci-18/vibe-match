@@ -12,7 +12,7 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
-    // console.log(process.env.API_ENDPOINT);
+    console.log(process.env.API_ENDPOINT);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
         try {
