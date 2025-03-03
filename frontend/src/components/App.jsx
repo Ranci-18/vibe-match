@@ -12,21 +12,19 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
+    // console.log(process.env.API_ENDPOINT);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
         try {
-            const response = await fetch(process.env.API_ENDPOINT, {
-                method: "POST",
+	    const url = `${process.env.API_ENDPOINT}?categoryActor=${encodeURIComponent(categoryActor)}&categoryActorName=${encodeURIComponent(categoryActorName)}`
+            const response = await fetch(url, {
+                method: "GET",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ 
-                    categoryActor,
-                    categoryActorName,
-                }),
             });
 
-            console.log(process.env.API_ENDPOINT);
+            // console.log(process.env.API_ENDPOINT);
             if (!response.ok) {
                 throw new Error("Network response was not ok");
             }
