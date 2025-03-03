@@ -12,7 +12,7 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
-    const baseUrl = 'https://5d1d-2001-41d0-403-e5b-00.ngrok-free.app';
+    const baseUrl = 'https://0e63-2001-41d0-403-e5b-00.ngrok-free.app';
     console.log(process.env.NEXT_PUBLIC_API_ENDPOINT || baseUrl);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
