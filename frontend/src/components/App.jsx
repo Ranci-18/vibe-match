@@ -12,11 +12,12 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
-    console.log(process.env.NEXT_PUBLIC_API_ENDPOINT);
+    const baseUrl = 'https://5d1d-2001-41d0-403-e5b-00.ngrok-free.app';
+    console.log(process.env.NEXT_PUBLIC_API_ENDPOINT || baseUrl);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
         try {
-	    const url = `${process.env.NEXT_PUBLIC_API_ENDPOINT}?categoryActor=${encodeURIComponent(categoryActor)}&categoryActorName=${encodeURIComponent(categoryActorName)}`
+	    const url = `${baseUrl}?categoryActor=${encodeURIComponent(categoryActor)}&categoryActorName=${encodeURIComponent(categoryActorName)}`
             const response = await fetch(url, {
                 method: "GET",
                 headers: {
