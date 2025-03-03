@@ -12,11 +12,11 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
-    console.log(process.env.API_ENDPOINT);
+    console.log(process.env.NEXT_PUBLIC_API_ENDPOINT);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
         try {
-	    const url = `${process.env.API_ENDPOINT}?categoryActor=${encodeURIComponent(categoryActor)}&categoryActorName=${encodeURIComponent(categoryActorName)}`
+	    const url = `${process.env.NEXT_PUBLIC_API_ENDPOINT}?categoryActor=${encodeURIComponent(categoryActor)}&categoryActorName=${encodeURIComponent(categoryActorName)}`
             const response = await fetch(url, {
                 method: "GET",
                 headers: {
