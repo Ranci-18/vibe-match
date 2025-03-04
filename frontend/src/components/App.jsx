@@ -12,8 +12,8 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
-    const baseUrl = 'https://0e63-2001-41d0-403-e5b-00.ngrok-free.app';
-    console.log(process.env.NEXT_PUBLIC_API_ENDPOINT || baseUrl);
+    const baseUrl = 'http://1e53-2001-41d0-403-e5b-00.ngrok-free.app/api/get-similar-vibes';
+    // console.log(baseUrl);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
         try {
@@ -25,12 +25,16 @@ const App = () => {
                 },
             });
 
+            // const textResponse = await response.text();
+            // console.log(textResponse);
+
             // console.log(process.env.API_ENDPOINT);
             if (!response.ok) {
                 throw new Error("Network response was not ok");
             }
 
             const data = await response.json();
+            // const data = JSON.parse(textResponse);
             const moviesArray = data.data;
             setFinResults(moviesArray);
         } catch (err) {
