@@ -12,7 +12,7 @@ const App = () => {
         books: "book",
         musician: "musician",
     }
-    const baseUrl = 'https://1e53-2001-41d0-403-e5b-00.ngrok-free.app/api/get-similar-vibes';
+    const baseUrl = 'https://e7a0-2001-41d0-403-e5b-00.ngrok-free.app/api/get-similar-vibes';
     // console.log(baseUrl);
 
     const getSimilarVibes = async (categoryActor, categoryActorName) => {
@@ -22,6 +22,7 @@ const App = () => {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
+                    "ngrok-skip-browser-warning": "true"
                 },
             });
 
