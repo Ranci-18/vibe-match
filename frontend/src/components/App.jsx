@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DivGrid from "./DivGrid";
+import '../sass/app.sass';
 
 const App = () => {
     const [category, setCategory] = useState("");
@@ -68,7 +69,7 @@ const App = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "flex-start",
             height: "100vh",
             backgroundColor: "#121212",
             color: "#ffffff",
@@ -76,6 +77,7 @@ const App = () => {
         }}
         >
         <h1 style={{ marginBottom: 20 }}>VibeMatch</h1>
+        <span style={{marginBottom: "20px"}}>If you like one thing, you're like another one just like it!!</span>
         <select
             value={category}
             onChange={handleCategoryChange}
