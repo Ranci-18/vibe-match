@@ -77,7 +77,7 @@ const App = () => {
         }}
         >
         <h1 style={{ marginBottom: 20 }}>VibeMatch</h1>
-        <span style={{marginBottom: "20px"}}>If you like one thing, you're like another one just like it!!</span>
+        <span style={{marginBottom: "20px"}}>If you like one thing, you'll like another one just like it!!</span>
         <select
             value={category}
             onChange={handleCategoryChange}
